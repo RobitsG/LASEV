@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Project Name - Instructional Video Generation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <h1 class="text-4xl font-bold text-gray-900 text-center mb-2">
+                Your Project Name
+            </h1>
+            <p class="text-xl text-gray-600 text-center">
+                Hierarchical LLM-based Multi-Agent System for Educational Video Generation
+            </p>
+            
+            <!-- Authors -->
+            <div class="text-center mt-4 text-gray-700">
+                <p>Author 1<sup>1</sup>, Author 2<sup>2</sup>, Author 3<sup>1</sup></p>
+                <p class="text-sm text-gray-500 mt-2">
+                    <sup>1</sup>Your Institution, <sup>2</sup>Another Institution
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    📄 Paper
+                </a>
+                <a href="#" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
+                    💻 Code
+                </a>
+                <a href="#" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+                    📊 Dataset
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <!-- Abstract -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Abstract</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Although recent end-to-end video generation models demonstrate impressive performance in visually oriented content creation, they remain limited in scenarios that require strict logical rigor and precise knowledge representation, such as instructional and educational media.
+                To address this problem, we propose <strong>Your Method Name</strong>, a hierarchical LLM-based multi-agent system for generating high-quality instructional videos from educational problems.
+                The system formulates educational video generation as a multi-objective task that simultaneously demands correct step-by-step reasoning, pedagogically coherent narration, semantically faithful visual demonstrations, and precise audio-visual alignment.
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-4">
+                Rather than directly synthesizing pixels, the system constructs a structured executable video script that is deterministically compiled into synchronized visuals and narration using template-driven assembly rules, enabling fully automated end-to-end production without manual editing.
+                In large-scale deployment, our method achieves a throughput exceeding <strong>one million videos per day</strong>, delivering over a <strong>95% reduction in cost</strong> compared to current industry-standard while maintaining a high acceptance rate.
+            </p>
+        </section>
+
+        <!-- Method Overview -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Method Overview</h2>
+            <div class="mb-6">
+                <img src="images/method-diagram.png" alt="Method Architecture" class="w-full rounded-lg shadow">
+                <p class="text-sm text-gray-500 text-center mt-2">
+                    Multi-agent system architecture with Orchestrating Agent coordinating specialized agents
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="font-bold text-lg mb-2">🎯 Solution Agent</h3>
+                    <p class="text-gray-600">Ensures rigorous step-by-step problem solving with logical correctness</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="font-bold text-lg mb-2">🎨 Illustration Agent</h3>
+                    <p class="text-gray-600">Generates executable visualization code for demonstrations</p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                    <h3 class="font-bold text-lg mb-2">📝 Narration Agent</h3>
+                    <p class="text-gray-600">Creates learner-oriented instructional scripts</p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                    <h3 class="font-bold text-lg mb-2">🎼 Orchestrating Agent</h3>
+                    <p class="text-gray-600">Coordinates all agents with quality gates and critique mechanisms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Cases -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Video Examples</h2>
+            
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Video 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="video-container">
+                        <video controls poster="images/thumbnail1.jpg">
+                            <source src="videos/example1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Example 1: Algebra Problem</h3>
+                        <p class="text-gray-600 text-sm">
+                            Solving quadratic equations with step-by-step visualization
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="video-container">
+                        <video controls poster="images/thumbnail2.jpg">
+                            <source src="videos/example2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Example 2: Geometry Problem</h3>
+                        <p class="text-gray-600 text-sm">
+                            Calculating area with dynamic geometric illustrations
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="video-container">
+                        <video controls poster="images/thumbnail3.jpg">
+                            <source src="videos/example3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Example 3: Physics Problem</h3>
+                        <p class="text-gray-600 text-sm">
+                            Kinematics with animated motion diagrams
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="video-container">
+                        <video controls poster="images/thumbnail4.jpg">
+                            <source src="videos/example4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Example 4: Statistics Problem</h3>
+                        <p class="text-gray-600 text-sm">
+                            Probability distributions with interactive charts
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- YouTube Alternative -->
+            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 class="font-bold text-lg mb-2">💡 Tip: Using YouTube for Video Hosting</h3>
+                <p class="text-gray-700 mb-2">
+                    For better performance, you can host videos on YouTube and embed them:
+                </p>
+                <div class="bg-white p-4 rounded mt-4">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Replace YOUR_VIDEO_ID with your actual YouTube video ID</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Results</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 bg-blue-50 rounded-lg">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">1M+</div>
+                    <div class="text-gray-700">Videos per day</div>
+                </div>
+                <div class="text-center p-6 bg-green-50 rounded-lg">
+                    <div class="text-4xl font-bold text-green-600 mb-2">95%</div>
+                    <div class="text-gray-700">Cost reduction</div>
+                </div>
+                <div class="text-center p-6 bg-purple-50 rounded-lg">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">High</div>
+                    <div class="text-gray-700">Acceptance rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation -->
+        <section class="bg-gray-100 rounded-lg p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Citation</h2>
+            <pre class="bg-white p-4 rounded border border-gray-300 overflow-x-auto text-sm"><code>@article{yourname2024method,
+  title={Your Project Name: Hierarchical LLM-based Multi-Agent System for Educational Video Generation},
+  author={Author1 and Author2 and Author3},
+  journal={Conference/Journal Name},
+  year={2024}
+}</code></pre>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Your Institution. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">
+                Contact: your.email@institution.edu
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
