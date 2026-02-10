@@ -4,7 +4,11 @@
 
 # Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation
 
-### [📄 Paper]() | [🌐 Project Page]()
+<div align="center">
+
+### [📄 Paper]() | [🌐 Project Page](https://robitsg.github.io/LASEV)
+
+</div>
 
 ## Overview
 
