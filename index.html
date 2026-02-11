@@ -8,7 +8,7 @@
     <title>LASEV - Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -53,10 +53,10 @@
                 </div>
             </div>
             
-            <h1 class="text-5xl font-bold text-center mb-4 leading-tight">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 leading-tight">
                 <span class="lasev-accent">LASEV</span>: Beyond End-to-End Video Models
             </h1>
-            <p class="text-3xl text-blue-100 text-center max-w-5xl mx-auto font-medium whitespace-nowrap">
+            <p class="text-xl sm:text-2xl lg:text-3xl text-blue-100 text-center max-w-5xl mx-auto font-medium">
                 An <span class="lasev-accent">L</span>LM-Based Multi-<span class="lasev-accent">A</span>gent <span class="lasev-accent">S</span>ystem for <span class="lasev-accent">E</span>ducational <span class="lasev-accent">V</span>ideo Generation
             </p>
             
@@ -79,7 +79,7 @@
             </div>
 
             <!-- Links -->
-            <div class="flex justify-center gap-6 mt-8">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-8">
                 <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-300 flex items-center gap-3 font-semibold shadow-lg hover:shadow-xl">
                     <i class="fas fa-file-alt text-xl"></i>
                     Read Paper
@@ -93,15 +93,15 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 py-16">
+    <main class="max-w-6xl mx-auto px-4 py-12 sm:py-16">
         
         <!-- Abstract -->
-        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-12 mb-12 card-hover border border-gray-100/50">
-            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-8 text-center">
+        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-12 mb-8 sm:mb-12 card-hover border border-gray-100/50">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6 sm:mb-8 text-center">
                 <i class="fas fa-info-circle mr-4"></i>
                 Abstract
             </h2>
-            <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+            <div class="space-y-4 sm:space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
                 <p>
                     Although recent end-to-end video generation models demonstrate impressive performance in visually oriented content creation, they remain limited in scenarios that require strict logical rigor and precise knowledge representation, such as instructional and educational media.
                     To address this problem, we propose <span class="lasev-accent">LASEV</span>, a hierarchical LLM-based multi-agent system for generating high-quality instructional videos from educational problems.
@@ -120,16 +120,16 @@
         </section>
 
         <!-- Method Overview -->
-        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-12 mb-12 card-hover border border-gray-100/50">
-            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-8 text-center">
+        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-12 mb-8 sm:mb-12 card-hover border border-gray-100/50">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6 sm:mb-8 text-center">
                 <i class="fas fa-sitemap mr-4"></i>
                 Framework Overview
             </h2>
             <div class="mb-6">
                 <div class="flex justify-center">
-                    <img src="assets/framework.png" alt="Multi-agent System Framework" class="w-4/5 rounded-2xl shadow-xl">
+                    <img src="assets/framework.png" alt="Multi-agent System Framework" class="w-full sm:w-4/5 rounded-2xl shadow-xl">
                 </div>
-                <p class="text-lg text-gray-600 text-center mt-6 font-medium">
+                <p class="text-base sm:text-lg text-gray-600 text-center mt-6 font-medium">
                     Multi-agent system framework with Orchestrating Agent coordinating working agents
                 </p>
             </div>
@@ -137,13 +137,13 @@
 
         <!-- Video Cases -->
         <section class="mb-12">
-            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-12 text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-8 sm:mb-12 text-center">
                 <i class="fas fa-video mr-4"></i>
                 Video Examples
             </h2>
             
             <!-- Video Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 
                 <!-- Mathematics Primary Education (With Illustration) -->
                 <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
@@ -153,9 +153,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Primary Education (With Illustration)</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Mathematics - Primary Education (With Illustration)</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for mathematics - primary education with illustration-based questions
                         </p>
                     </div>
@@ -169,9 +169,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Secondary Education (With Illustration)</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Mathematics - Secondary Education (With Illustration)</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for mathematics - secondary education with illustration-based questions
                         </p>
                     </div>
@@ -185,9 +185,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Primary Education (Without Illustration)</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Mathematics - Primary Education (Without Illustration)</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for mathematics - primary education without illustration-based questions
                         </p>
                     </div>
@@ -201,9 +201,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Secondary Education (Without Illustration)</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Mathematics - Secondary Education (Without Illustration)</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for mathematics - secondary education without illustration-based questions
                         </p>
                     </div>
@@ -217,9 +217,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Chinese - Primary Education</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Chinese - Primary Education</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for Chinese - primary education questions
                         </p>
                     </div>
@@ -233,9 +233,9 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Chinese - Secondary Education</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed">
+                    <div class="p-5 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-3 sm:mb-4">Chinese - Secondary Education</h3>
+                        <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
                             Educational video for Chinese - secondary education questions
                         </p>
                     </div>
@@ -245,8 +245,8 @@
         </section>
 
         <!-- Key Features -->
-        <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl shadow-2xl p-12 card-hover">
-            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-12 text-center">
+        <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl shadow-2xl p-6 sm:p-10 lg:p-12 card-hover">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-8 sm:mb-12 text-center">
                 <i class="fas fa-star mr-4"></i>
                 Key Features
             </h2>
