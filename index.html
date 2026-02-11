@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LASEV - Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -21,158 +27,216 @@
             width: 100%;
             height: 100%;
         }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .lasev-accent {
+            color: #f4b400;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gradient-to-br from-gray-50 to-blue-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-6">
+    <header class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 py-12">
             <!-- Baidu Logo -->
-            <div class="flex justify-center mb-4">
-                <img src="assets/baidu.png" alt="Baidu" class="h-12">
+            <div class="flex justify-center mb-6">
+                <div class="bg-white p-2 rounded-lg shadow-sm">
+                    <img src="./assets/baidu.png" alt="Baidu" class="h-16">
+                </div>
             </div>
             
-            <h1 class="text-4xl font-bold text-gray-900 text-center mb-2">
-                LASEV—Beyond End-to-End Video Models
+            <h1 class="text-5xl font-bold text-center mb-4 leading-tight">
+                <span class="lasev-accent">LASEV</span>: Beyond End-to-End Video Models
             </h1>
-            <p class="text-xl text-gray-600 text-center">
-                An LLM-Based Multi-Agent System for Educational Video Generation
+            <p class="text-3xl text-blue-100 text-center max-w-5xl mx-auto font-medium whitespace-nowrap">
+                An <span class="lasev-accent">L</span>LM-Based Multi-<span class="lasev-accent">A</span>gent <span class="lasev-accent">S</span>ystem for <span class="lasev-accent">E</span>ducational <span class="lasev-accent">V</span>ideo Generation
             </p>
             
             <!-- Authors -->
-            <div class="text-center mt-4 text-gray-700">
-                <p class="mb-2">
-                    <a href="mailto:lingyongy@gmail.com" class="hover:text-blue-600">Lingyong Yan</a><sup>*</sup>, 
-                    <a href="mailto:wjlwujiulong@gmail.com" class="hover:text-blue-600">Jiulong Wu</a><sup>*</sup>, 
-                    <a href="mailto:xie.dong@hotmail.com" class="hover:text-blue-600">Dong Xie</a>, 
-                    <a href="mailto:shiweixian@baidu.com" class="hover:text-blue-600">Weixian Shi</a>, 
-                    <a href="mailto:xiadeguo@baidu.com" class="hover:text-blue-600">Deguo Xia</a>, 
-                    <a href="mailto:huangjizhou@baidu.com" class="hover:text-blue-600">Jizhou Huang</a><sup>†</sup>
+            <div class="text-center mt-8 text-white mb-8">
+                <p class="text-lg text-white leading-relaxed mb-2">
+                    <a href="mailto:lingyongy@gmail.com" class="hover:text-blue-200 transition">Lingyong Yan</a><sup class="text-yellow-300">*</sup>, 
+                    <a href="mailto:wjlwujiulong@gmail.com" class="hover:text-blue-200 transition">Jiulong Wu</a><sup class="text-yellow-300">*</sup>, 
+                    <a href="mailto:xie.dong@hotmail.com" class="hover:text-blue-200 transition">Dong Xie</a>, 
+                    <a href="mailto:shiweixian@baidu.com" class="hover:text-blue-200 transition">Weixian Shi</a>, 
+                    <a href="mailto:xiadeguo@baidu.com" class="hover:text-blue-200 transition">Deguo Xia</a>, 
+                    <a href="mailto:huangjizhou@baidu.com" class="hover:text-blue-200 transition">Jizhou Huang</a><sup class="text-green-300">†</sup>
                 </p>
-                <div class="flex items-center justify-center gap-2 mt-2">
-                    <p class="text-sm text-gray-500">
-                        Baidu Inc., Beijing, China
-                    </p>
-                </div>
-                <p class="text-xs text-gray-400 mt-1">
-                    <sup>*</sup>Equal contribution, <sup>†</sup>Project lead and corresponding author
+                <p class="text-sm text-blue-200 leading-relaxed">
+                    Baidu Inc., Beijing, China
+                </p>
+                <p class="text-sm text-blue-200 leading-relaxed mt-1">
+                    <sup class="text-yellow-300">*</sup>Equal contribution, <sup class="text-green-300">†</sup>Project lead and corresponding author
                 </p>
             </div>
 
             <!-- Links -->
-            <div class="flex justify-center gap-4 mt-6">
-                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                    📄 Paper
+            <div class="flex justify-center gap-6 mt-8">
+                <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-300 flex items-center gap-3 font-semibold shadow-lg hover:shadow-xl">
+                    <i class="fas fa-file-alt text-xl"></i>
+                    Read Paper
                 </a>
-                <a href="https://github.com/RobitsG/LASEV" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
-                    💻 Code
+                <a href="https://github.com/RobitsG/LASEV" class="bg-blue-800 text-white px-8 py-4 rounded-xl hover:bg-blue-900 transition-all duration-300 flex items-center gap-3 font-semibold shadow-lg hover:shadow-xl border border-blue-700">
+                    <i class="fab fa-github text-xl"></i>
+                    View Code
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 py-12">
+    <main class="max-w-6xl mx-auto px-4 py-16">
         
         <!-- Abstract -->
-        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Abstract</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Although recent end-to-end video generation models demonstrate impressive performance in visually oriented content creation, they remain limited in scenarios that require strict logical rigor and precise knowledge representation, such as instructional and educational media.
-                To address this problem, we propose <strong>LASEV</strong>, a hierarchical LLM-based multi-agent system for generating high-quality instructional videos from educational problems.
-                LASEV formulates educational video generation as a multi-objective task that simultaneously demands correct step-by-step reasoning, pedagogically coherent narration, semantically faithful visual demonstrations, and precise audio-visual alignment.
-            </p>
-            <p class="text-gray-700 leading-relaxed mt-4">
-                To address the limitations of prior approaches—including low procedural fidelity, high production cost, and limited controllability—LASEV decomposes the generation workflow into specialized agents coordinated by a central Orchestrating Agent with explicit quality gates and iterative critique mechanisms.
-                Specifically, the Orchestrating Agent supervises a Solution Agent for rigorous problem solving, an Illustration Agent that produces executable visualization codes, and a Narration Agent for learner-oriented instructional scripts.
-                In addition, all outputs from the working agents are subject to semantic critique, rule-based constraints, and tool-based compilation checks.
-            </p>
-            <p class="text-gray-700 leading-relaxed mt-4">
-                Rather than directly synthesizing pixels, the system constructs a structured executable video script that is deterministically compiled into synchronized visuals and narration using template-driven assembly rules, enabling fully automated end-to-end production without manual editing.
-                In large-scale deployments, LASEV achieves a throughput exceeding <strong>one million videos per day</strong>, delivering over a <strong>95% reduction in cost</strong> compared to current industry-standard approaches while maintaining a high acceptance rate.
-            </p>
+        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-12 mb-12 card-hover border border-gray-100/50">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-8 text-center">
+                <i class="fas fa-info-circle mr-4"></i>
+                Abstract
+            </h2>
+            <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p>
+                    Although recent end-to-end video generation models demonstrate impressive performance in visually oriented content creation, they remain limited in scenarios that require strict logical rigor and precise knowledge representation, such as instructional and educational media.
+                    To address this problem, we propose <span class="lasev-accent">LASEV</span>, a hierarchical LLM-based multi-agent system for generating high-quality instructional videos from educational problems.
+                    <span class="lasev-accent">LASEV</span> formulates educational video generation as a multi-objective task that simultaneously demands correct step-by-step reasoning, pedagogically coherent narration, semantically faithful visual demonstrations, and precise audio-visual alignment.
+                </p>
+                <p>
+                    To address the limitations of prior approaches—including low procedural fidelity, high production cost, and limited controllability—<span class="lasev-accent">LASEV</span> decomposes the generation workflow into specialized agents coordinated by a central Orchestrating Agent with explicit quality gates and iterative critique mechanisms.
+                    Specifically, the Orchestrating Agent supervises a Solution Agent for rigorous problem solving, an Illustration Agent that produces executable visualization codes, and a Narration Agent for learner-oriented instructional scripts.
+                    In addition, all outputs from the working agents are subject to semantic critique, rule-based constraints, and tool-based compilation checks.
+                </p>
+                <p>
+                    Rather than directly synthesizing pixels, the system constructs a structured executable video script that is deterministically compiled into synchronized visuals and narration using template-driven assembly rules, enabling fully automated end-to-end production without manual editing.
+                    In large-scale deployments, <span class="lasev-accent">LASEV</span> achieves a throughput exceeding <strong class="text-blue-600">one million videos per day</strong>, delivering over a <strong class="text-blue-600">95% reduction in cost</strong> compared to current industry-standard approaches while maintaining a high acceptance rate.
+                </p>
+            </div>
         </section>
 
         <!-- Method Overview -->
-        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Method Overview</h2>
+        <section class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl p-12 mb-12 card-hover border border-gray-100/50">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-8 text-center">
+                <i class="fas fa-sitemap mr-4"></i>
+                Framework Overview
+            </h2>
             <div class="mb-6">
                 <div class="flex justify-center">
-                    <img src="assets/framework.png" alt="Multi-agent System Framework" class="w-3/4 rounded-lg shadow">
+                    <img src="assets/framework.png" alt="Multi-agent System Framework" class="w-4/5 rounded-2xl shadow-xl">
                 </div>
-                <p class="text-sm text-gray-500 text-center mt-2">
-                    Multi-agent system architecture with Orchestrating Agent coordinating working agents
+                <p class="text-lg text-gray-600 text-center mt-6 font-medium">
+                    Multi-agent system framework with Orchestrating Agent coordinating working agents
                 </p>
             </div>
         </section>
 
         <!-- Video Cases -->
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Video Examples</h2>
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-12 text-center">
+                <i class="fas fa-video mr-4"></i>
+                Video Examples
+            </h2>
             
             <!-- Video Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Video 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Mathematics Primary Education (With Illustration) -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
                     <div class="video-container">
-                        <video controls poster="images/thumbnail1.jpg">
-                            <source src="videos/example1.mp4" type="video/mp4">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/math_ps_with_illustration.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Example 1: Algebra Problem</h3>
-                        <p class="text-gray-600 text-sm">
-                            Solving quadratic equations with step-by-step visualization
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Primary Education (With Illustration)</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for mathematics - primary education with illustration-based questions
                         </p>
                     </div>
                 </div>
 
-                <!-- Video 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Mathematics Secondary Education (With Illustration) -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
                     <div class="video-container">
-                        <video controls poster="images/thumbnail2.jpg">
-                            <source src="videos/example2.mp4" type="video/mp4">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/math_ms_with_illustration.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Example 2: Geometry Problem</h3>
-                        <p class="text-gray-600 text-sm">
-                            Calculating area with dynamic geometric illustrations
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Secondary Education (With Illustration)</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for mathematics - secondary education with illustration-based questions
                         </p>
                     </div>
                 </div>
 
-                <!-- Video 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Mathematics Primary Education (Without Illustration) -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
                     <div class="video-container">
-                        <video controls poster="images/thumbnail3.jpg">
-                            <source src="videos/example3.mp4" type="video/mp4">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/math_ps.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Example 3: Physics Problem</h3>
-                        <p class="text-gray-600 text-sm">
-                            Kinematics with animated motion diagrams
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Primary Education (Without Illustration)</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for mathematics - primary education without illustration-based questions
                         </p>
                     </div>
                 </div>
 
-                <!-- Video 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Mathematics Secondary Education (Without Illustration) -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
                     <div class="video-container">
-                        <video controls poster="images/thumbnail4.jpg">
-                            <source src="videos/example4.mp4" type="video/mp4">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/math_ms.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Example 4: Statistics Problem</h3>
-                        <p class="text-gray-600 text-sm">
-                            Probability distributions with interactive charts
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Mathematics - Secondary Education (Without Illustration)</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for mathematics - secondary education without illustration-based questions
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chinese Primary Education -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
+                    <div class="video-container">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/chinese_ps.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Chinese - Primary Education</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for Chinese - primary education questions
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chinese Secondary Education -->
+                <div class="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-100/50">
+                    <div class="video-container">
+                        <video controls class="rounded-t-3xl">
+                            <source src="videos/chinese_ms.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4">Chinese - Secondary Education</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Educational video for Chinese - secondary education questions
                         </p>
                     </div>
                 </div>
@@ -180,21 +244,85 @@
             </div>
         </section>
 
-        <!-- Results -->
-        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Results</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="text-center p-6 bg-blue-50 rounded-lg">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">1M+</div>
-                    <div class="text-gray-700">Videos per day</div>
+        <!-- Key Features -->
+        <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl shadow-2xl p-12 card-hover">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-12 text-center">
+                <i class="fas fa-star mr-4"></i>
+                Key Features
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Videos per day card -->
+                <div class="group relative cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-300/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-blue-100/50 transition-all duration-500 hover:bg-white/95 hover:shadow-2xl hover:-translate-y-3">
+                        <div class="absolute top-4 right-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-play text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <div class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-4 pt-4 pb-1">1M+</div>
+                            <div class="text-gray-600 text-lg font-semibold">Videos per day</div>
+                            <div class="text-blue-500 text-sm mt-2 opacity-70">Scale and Efficiency</div>
+                        </div>
+                        <div class="w-full bg-gray-200/50 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full w-4/5 transition-all duration-1000 group-hover:w-full"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-6 bg-green-50 rounded-lg">
-                    <div class="text-4xl font-bold text-green-600 mb-2">95%</div>
-                    <div class="text-gray-700">Cost reduction</div>
+
+                <!-- Cost reduction card -->
+                <div class="group relative cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-300/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-green-100/50 transition-all duration-500 hover:bg-white/95 hover:shadow-2xl hover:-translate-y-3">
+                        <div class="absolute top-4 right-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-chart-pie text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <div class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-800 mb-4 pt-4 pb-1">95%</div>
+                            <div class="text-gray-600 text-lg font-semibold">Cost reduction</div>
+                            <div class="text-green-500 text-sm mt-2 opacity-70">Economic Impact</div>
+                        </div>
+                        <div class="w-full bg-gray-200/50 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full w-3/4 transition-all duration-1000 group-hover:w-full"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-6 bg-purple-50 rounded-lg">
-                    <div class="text-4xl font-bold text-purple-600 mb-2">High</div>
-                    <div class="text-gray-700">Acceptance rate</div>
+
+                <!-- Acceptance rate card -->
+                <div class="group relative cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-purple-300/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-purple-100/50 transition-all duration-500 hover:bg-white/95 hover:shadow-2xl hover:-translate-y-3">
+                        <div class="absolute top-4 right-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-check text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <div class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800 mb-4 pt-4 pb-1">High</div>
+                            <div class="text-gray-600 text-lg font-semibold">Acceptance rate</div>
+                            <div class="text-purple-500 text-sm mt-2 opacity-70">Quality Assurance</div>
+                        </div>
+                        <div class="w-full bg-gray-200/50 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full w-5/6 transition-all duration-1000 group-hover:w-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Summary bar -->
+            <div class="mt-12 bg-white/50 rounded-xl p-6 border border-gray-200/50 backdrop-blur-sm">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="text-lg font-semibold text-gray-700">Performance metrics demonstrate superior scalability and efficiency</div>
+                    <div class="flex gap-3">
+                        <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">AI-Powered</div>
+                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Cost-Effective</div>
+                        <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">High-Quality</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -202,9 +330,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6 mt-12">
+    <footer class="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-12 mt-16">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2026 Baidu Inc. All rights reserved.</p>
+            <div class="flex justify-center items-center mb-6">
+                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                    <i class="fas fa-university text-xl text-blue-300"></i>
+                </div>
+            </div>
+            <p class="text-blue-300 text-base">&copy; 2026 Baidu Inc. All rights reserved.</p>
         </div>
     </footer>
 
