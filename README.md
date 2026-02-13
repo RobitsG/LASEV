@@ -6,7 +6,7 @@
 
 <div align="center">
 
-### [📄 Paper]() | [🌐 Project Page](https://robitsg.github.io/LASEV)
+### [📄 Paper](https://arxiv.org/abs/2602.11790) | [🌐 Project Page](https://robitsg.github.io/LASEV)
 
 </div>
 
@@ -32,4 +32,14 @@ LASEV is a hierarchical LLM-based multi-agent system for generating high-quality
 
 ## Citation
 
-TBA
+If you find this work useful, please cite:
+
+```bibtex
+@misc{yan2026lasev,
+  title={Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation},
+  author={Yan, Lingyong and Wu, Jiulong and Xie, Dong and Shi, Weixian and Xia, Deguo and Huang, Jizhou},
+  year={2026},
+  eprint={2602.11790},
+  archivePrefix={arXiv}
+}
+```
